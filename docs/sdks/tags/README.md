@@ -139,11 +139,11 @@ func main() {
     s := dubgo.New(
         dubgo.WithSecurity("DUB_API_KEY"),
     )
-    request := operations.UpdateTagRequest{
-        ID: "<id>",
-    }
+    var id string = "<value>"
+
+    var requestBody *operations.UpdateTagRequestBody = &operations.UpdateTagRequestBody{}
     ctx := context.Background()
-    res, err := s.Tags.Update(ctx, request)
+    res, err := s.Tags.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -155,10 +155,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.UpdateTagRequest](../../models/operations/updatetagrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `ctx`                                                                               | [context.Context](https://pkg.go.dev/context#Context)                               | :heavy_check_mark:                                                                  | The context to use for the request.                                                 |
+| `id`                                                                                | *string*                                                                            | :heavy_check_mark:                                                                  | The ID of the tag to update.                                                        |
+| `requestBody`                                                                       | [*operations.UpdateTagRequestBody](../../models/operations/updatetagrequestbody.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
 
 
 ### Response

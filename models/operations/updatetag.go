@@ -94,7 +94,7 @@ func (o *UpdateTagRequestBody) GetTag() *string {
 }
 
 type UpdateTagRequest struct {
-	// The ID of the tag
+	// The ID of the tag to update.
 	ID          string                `pathParam:"style=simple,explode=false,name=id"`
 	RequestBody *UpdateTagRequestBody `request:"mediaType=application/json"`
 }

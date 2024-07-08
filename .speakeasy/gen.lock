@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 1773e9c7-1931-4663-8ac8-4deaf8db76f5
 management:
-  docChecksum: bdbe0b838757272c0b9e043ea9c5cb5f
+  docChecksum: 15f8f5e148453cdd9612beaac38125e3
   docVersion: 0.0.1
-  speakeasyVersion: 1.327.0
-  generationVersion: 2.359.6
-  releaseVersion: 0.1.14
-  configChecksum: cafe3098163ff931fd386d5836118e1d
+  speakeasyVersion: 1.330.0
+  generationVersion: 2.361.10
+  releaseVersion: 0.1.15
+  configChecksum: 9f56ebce2cd21572da0bf9b454c24b9a
   repoURL: https://github.com/dubinc/dub-go.git
   installationURL: https://github.com/dubinc/dub-go
 features:
@@ -251,6 +251,7 @@ generatedFiles:
   - docs/models/operations/retrieveanalyticsrequest.md
   - docs/models/operations/retrieveanalyticsresponsebody.md
   - docs/models/operations/getworkspacerequest.md
+  - docs/models/operations/updateworkspacerequestbody.md
   - docs/models/operations/updateworkspacerequest.md
   - docs/models/operations/gettagsglobals.md
   - docs/models/operations/gettagsrequest.md

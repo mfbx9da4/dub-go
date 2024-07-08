@@ -445,12 +445,17 @@ func (s *Tags) Create(ctx context.Context, request *operations.CreateTagRequestB
 
 // Update a tag
 // Update a tag in the workspace.
-func (s *Tags) Update(ctx context.Context, request operations.UpdateTagRequest) (*components.TagSchema, error) {
+func (s *Tags) Update(ctx context.Context, id string, requestBody *operations.UpdateTagRequestBody) (*components.TagSchema, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "updateTag",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	request := operations.UpdateTagRequest{
+		ID:          id,
+		RequestBody: requestBody,
 	}
 
 	globals := operations.UpdateTagGlobals{
